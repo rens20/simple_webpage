@@ -40,7 +40,6 @@
   
     </header>
     <br>
-    <br>
     <main>
         <div class="left">
             <h1>Welcome to <span class="green">We-</span><span class="blue">Wash Laundry</span>!</h1>
@@ -54,7 +53,12 @@
     <br>
     <br>
     <br>
-    <hr>
+    <br>
+     <br>
+    <br>
+    <br>
+    <br>
+
     <section id="about">
         <h1 class="h1">About Us</h1>
         <p class="center">Welcome to <span class="green">We-</span>Wash Laundry</span>!</p>

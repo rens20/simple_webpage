@@ -299,14 +299,14 @@ flex-direction: row;
 require_once __DIR__ . '../config/process_db.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $first_name = $_POST['name'];
+    $name = $_POST['name'];
 
     $phone = $_POST['phone'];
     $address = $_POST['address'];
     $inquiry = $_POST['inquiry'];
 
     $sql = "INSERT INTO contact_form (name,  phone, address, inquiry)
-            VALUES ('$first_name', '$phone', '$address', '$inquiry')";
+            VALUES ('$name', '$phone', '$address', '$inquiry')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<script>

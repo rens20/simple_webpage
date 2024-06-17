@@ -225,7 +225,7 @@ flex-direction: row;
             <img src="./image/Full Service.png" alt="">
             <img src="./image/Self Service.png" alt="">
         </div>
-        <button>See More</button>
+        <button class="learn-more">See More</button>
     </main>
     <br>
     <br>
@@ -341,6 +341,12 @@ flex-direction: row;
                     document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
                 });
             });
+        });
+    </script>
+     <script>
+        document.querySelector('.learn-more').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('self-service').scrollIntoView({ behavior: 'smooth' });
         });
     </script>
     

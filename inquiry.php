@@ -52,7 +52,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             text-align: center;
             color: aliceblue;
         }
-
+ .answer{
+    display: none;
+    margin-left: 30px;
+ }
         .inquiry {
             margin-bottom: 20px;
             padding: 10px 10px;
@@ -271,21 +274,32 @@ flex-direction: row;
     <div class="container">
         <div class="inquiries"  id="container">
             <div class="inquiry">
-                <h3>1. What are your operating hours?</h3>
-    
+                <h3 class="question" data-toggle="answer1" >1. What are your operating hours?</h3>
+                 <p class="answer" id="answer1"> WE-Wash Laundry full service is open 24 hours.</p>
             </div>
     
             <div class="inquiry">
-                <h3>2. How do I use the self-service machines?</h3>
+                <h3 class="question" data-toggle="answer2" >2. How do I use the self-service machines?</h3>
+                  <p class="answer" id="answer2">Using our self-service machines is easy!  load your laundry in to the washer <pr> 
+                    add detergent select your cycle and start.transwer clothes to the dryer when   <br>
+                    washing is complete
+                  </p>
+            </div>
+            <div class="inquiry" >
+                <h3 class="question" data-toggle="answer3" >3. Do you provide detergent and other supplies?</h3>
+                 <p class="answer" id="answer3"> Yes, we offer high qauality detergent and other laundry essentials for purchase <br>
+                 at our facility but you can bring your own!
+</p>
             </div>
             <div class="inquiry">
-                <h3>3. Do you provide detergent and other supplies?</h3>
+                <h3 class="question" data-toggle="answer4">4. What services do you offer in your full-service laundry?</h3>
+                 <p class="answer" id="answer4">Our full-service   includes picl-up and delivery, professional washing, <br>
+                 folding or hangging , and accomodating special request</p>
             </div>
             <div class="inquiry">
-                <h3>4. What services do you offer in your full-service laundry?</h3>
-            </div>
-            <div class="inquiry">
-                <h3>5. How do I schedule a pick-up for full-service laundry?</h3>
+                <h3  class="question" data-toggle="answer5">5. How do I schedule a pick-up for full-service laundry?</h3>
+                  <p class="answer" id="answer5">You can schedule a pcik-up by acontracting us via phone or throuht our website <br>
+                We'll arrange a convenient time for collection </p>
             </div>
         </div>
     
@@ -336,6 +350,37 @@ flex-direction: row;
         document.querySelector('.read-more').addEventListener('click', function() {
             document.getElementById('container').scrollIntoView({ behavior: 'smooth' });
         });
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.question').forEach(function(question) {
+                question.addEventListener('click', function() {
+
+             document.querySelectorAll('.answer').forEach(function(answer) {
+                answer.style.display = 'none';
+             });
+
+                    const answerId = this.getAttribute('data-toggle');
+                    const answer =document.getElementById(answerId);
+                    if (answer.style.display === 'none' || answer.style.display === "") {
+                        answer.style.display = 'block';
+
+                        setTimeout(function () {
+                            answer.style.display = 'none';
+                        },5000);
+                        }else {
+                            answer.style.display = 'none'
+                        
+                        }
+                        });
+
+                    
+                });
+            });
+    
+
+
     </script>
 </body>
 
