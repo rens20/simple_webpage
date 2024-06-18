@@ -271,8 +271,9 @@ flex-direction: row;
             </div>
             <div class="background">
               <ul id="nav-menu">
+                <li><a href="index.php">Home</a></li>
                 
-                <li><a href="index.php">About Us</a></li>
+            <li><a href="about.php">About Us</a></li>
                 <li class="dropdown">
                     <a href="services.php">Services</a>
                     <ul class="dropdown-content">

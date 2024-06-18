@@ -21,8 +21,9 @@
             </div>
             <div class="background">
             <ul id="nav-menu">
+                <li><a href="index.php">Home</a></li>
                 
-                <li><a href="index.php">About Us</a></li>
+                <li><a href="about.php">About Us</a></li>
                 <li class="dropdown">
                     <a href="services.php">Services</a>
                     <ul class="dropdown-content">
@@ -39,8 +40,8 @@
         </nav>
   
     </header>
-    <br>
-    <main>
+
+   <main>
         <div class="left">
             <h1>Welcome to <span class="green">We-</span><span class="blue">Wash Laundry</span>!</h1>
         </div>
@@ -81,47 +82,60 @@
             to assist you with any queries or special requests.</p>
         <p>Join us at We-Wash Laundry, where we turn the chore of laundry into a seamless and satisfying experience.
             Discover the difference with our commitment to quality, affordability, and convenience.</p>
-        <a href="#more-info" class="learn-more">Learn More</a>
+        <a href="about.php" class="learn-more">Learn More</a>
     </section>
+  <main class="ser">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Services</h1>
+        <div class="images">
+            <img src="./image/Full Service.png" alt="">
+            <img src="./image/Self Service.png" alt="">
+        </div>
+        <button class="hello">See More</button>
+ 
 
-    <h2>Meet the People Behind <span class="green"> We-</span> <span class="blue"> Wash Laundry</h2></span>
-    <section id="team">
-    
-    
-        <div class="team-member">
-            <div class="lefts">
-                <div class="image">
-                    <img src="./image/Melanie.png" class="owners" alt="Melanie Telebrico">
-                </div>
-                <div class="info">
-                    <p><strong class="strong">Melanie Telebrico</strong><br><span class="owners">Owner </span> </br></p>
-                    <p>Meet Melanie, the owner of We-Wash Laundry! During the day, she's a creative marketing freelancer,
-                        crafting ads and promotions. But in the morning, she's our main laundry hero, making sure every sock
-                        and shirt sparkles.</p>
-                    <p>This year, Melanie started this awesome laundry business. With her skills in marketing and a passion
-                        for clean clothes, she's making laundry day fun and easy for everyone.</p>
-                </div>
-            </div>
-        </div>
-    
-        <div class="team-member">
-            <div class="rights">
-                <div class="image">
-                    <img src="./image/Andrea.png" class="owner" alt="Andrea Telebrico">
-                </div>
-                <div class="info">
-                    <p><strong class="strong">Andrea Telebrico</strong><br><span class="owner"> Social Media Manager</span>
-                    </p>
-                    <p>Meet Andrea, the lively mind behind We-Wash Laundry’s social media magic. As Melanie’s daughter,
-                        Andrea adds a burst of creativity and energy to our team. She works full-time as a digital marketing
-                        coordinator for international clients, bringing her love for storytelling and digital skills to
-                        every post and campaign.</p>
-                    <p>Andrea makes sure our social media is lively and engaging, making laundry day exciting! Join us
-                        online and let Andrea Telebrico show you how fun laundry can be!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </main>
+ <section class="backgrounds"> 
+ <h1 class="blues">INQUIRY</h1>
+    <div class="inquiry">
+          <h3 class="question" data-toggle="answer1" >1. What are your operating hours?</h3>
+                 <p class="answer" id="answer1"> WE-Wash Laundry full service is open 24 hours.</p>
+        
+ 
+    </div>
+
+    <div class="inquiry">
+        <h3 class="question" data-toggle="answer2" >2. How do I use the self-service machines?</h3>
+                  <p class="answer" id="answer2">Using our self-service machines is easy!  load your laundry in to the washer <pr> 
+                    add detergent select your cycle and start.transwer clothes to the dryer when   <br>
+                    washing is complete
+                  </p>
+ 
+    </div>
+
+    <div class="inquiry">
+                    <h3 class="question" data-toggle="answer3" >3. Do you provide detergent and other supplies?</h3>
+                 <p class="answer" id="answer3"> Yes, we offer high qauality detergent and other laundry essentials for purchase <br>
+                 at our facility but you can bring your own!
+</p>
+     
+    </div>
+    <button  onclick="go()" class="read-more">Read More</button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</section>
+
+
     <footer>
     <!-- <p><a href="https://www.facebook.com/wewashlaundry" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></p>
     <p><a href="mailto:info@wewashlaundry.com"><i class="far fa-envelope"></i> Email</a></p><br> -->
@@ -130,11 +144,36 @@
     <p>&copy; 2024 We-Wash Laundry. All rights reserved.</p>
 </div>
 </footer>
-    <script>
-        document.querySelector('.learn-more').addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector('#team').scrollIntoView({ behavior: 'smooth' });
-        });
+<script>
+      document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.question').forEach(function(question) {
+                question.addEventListener('click', function() {
+
+             document.querySelectorAll('.answer').forEach(function(answer) {
+                answer.style.display = 'none';
+             });
+
+                    const answerId = this.getAttribute('data-toggle');
+                    const answer =document.getElementById(answerId);
+                    if (answer.style.display === 'none' || answer.style.display === "") {
+                        answer.style.display = 'block';
+
+                        setTimeout(function () {
+                            answer.style.display = 'none';
+                        },5000);
+                        }else {
+                            answer.style.display = 'none'
+                        
+                        }
+                        });
+
+                    
+                });
+            });
+
+ function go() {
+    window.location.href="services.php";
+ }
     </script>
 </body>
 </html>

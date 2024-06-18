@@ -124,6 +124,7 @@
    font-family: cursive;
 
     text-align: center;
+    margin-top: 50px;
         }
         .text{
             text-align: center;
@@ -193,8 +194,9 @@ flex-direction: row;
             </div>
             <div class="background">
                  <ul id="nav-menu">
-                
-                <li><a href="index.php">About Us</a></li>
+                <li><a href="index.php">Home</a></li>
+
+            <li><a href="about.php">About Us</a></li>
                 <li class="dropdown">
                     <a href="services.php">Services</a>
                     <ul class="dropdown-content">
@@ -211,22 +213,11 @@ flex-direction: row;
         </nav>
     
     </header>
- 
 
-    <main>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <h1>Services</h1>
-        <div class="images">
-            <img src="./image/Full Service.png" alt="">
-            <img src="./image/Self Service.png" alt="">
-        </div>
-        <button class="learn-more">See More</button>
-    </main>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
    <br>
